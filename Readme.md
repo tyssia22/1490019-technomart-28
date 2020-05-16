@@ -1,7 +1,8 @@
 # Личный проект «Техномарт»
 
 * Студент: [Наталья Мельничук](https://up.htmlacademy.ru/htmlcss/28/user/1490019).
-* Наставник: `Анастасия Полозова`(https://htmlacademy.ru/profile/id258631)
+* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
+
 
 ---
 
