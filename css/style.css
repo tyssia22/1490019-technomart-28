@@ -1,0 +1,237 @@
+/* Variables */
+
+:root {
+  --basic-blue: #32425c;
+  --basic-blue-dark: #293449;
+  --basic-yellow: #ffbf47;
+  --basic-yellow-dark: #ffd180;
+  --basic-pink: #ee3643;
+  --basic-pink-dark: #ba2732;
+  --basic-white: #ffffff;
+  --basic-green: #63a63e;
+  --basic-green-light: #5fbb2d;
+  --basic-green-dark: #518534;
+  --basic-grey: #b5b5b5;
+  --basic-grey-light: #e5e5e5;
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-special: #f3f7f9;
+}
+body {
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+         }
+a {
+  text-decoration: none;
+  }
+ul{
+	list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+    }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+ }    
+.blue{
+ background-color: var(--basic-blue-dark);
+ color: var(--basic-white);
+     }
+ a{
+ color: var(--basic-white);
+ } 
+.order{
+ background-color: var(--basic-green);
+ width: 150px;
+ height: 42px;
+	}
+.order:hover,
+.order:focus {
+  background-color: var(--basic-green-light);
+}
+.order:active {
+  background-color: var(--basic-green);
+}
+.order a:active {
+  color: rgba(255, 255, 255, 0.5);
+}
+.menu,.main-footer{
+	background-color: var(--basic-blue);
+}
+.menu a:hover,
+.menu a:focus{
+	background-color: var(--basic-blue-dark);
+}
+.logo{
+	background-color: var(--basic-pink);
+	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+	width: 220px;
+	height: 47px;
+	background-image: url('../img/logo-technomart.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.logo:hover,
+.logo:focus{
+	background-color: var(--basic-pink);
+}
+.logo:active{
+	background-color: var(--basic-pink-dark);
+}
+.search {
+  background-color: inherit;
+  background-image: url("../img/icon-search.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 271px;
+  height: 42px;
+  border: none;
+
+}
+.description{
+	font-size: 16px;
+	line-height: 23px;
+	color: var(--basic-pink);
+	font-style: italic;
+}
+.phone{
+	border: 3px solid var(--basic-white);
+	background-color: var(--basic-special);
+}
+.phone-number{
+	font-size: 21px;
+	line-height: 30px;
+	font-weight: bold;
+	color: var(--basic-pink);
+}
+.adress{
+	font-size: 14px;
+	color: var(--basic-blue);
+}
+.login,.registration{
+	font-size: 21px;
+	line-height: 21px; 
+	background-color: var(--basic-white);
+	color: var(--basic-black);
+}
+.head{
+	background-color: var(--basic-special);
+}
+.wrapper{
+	font-family: PT Sans;
+    font-size: 13px;
+    line-height: 24px;
+}
+.button{
+	text-transform: uppercase;
+	color: var(--basic-white);
+	background-color: var(--basic-pink);
+	font-family: Cuprum;
+	font-size: 14px;
+	line-height: 18px;
+}
+.title{
+	text-transform: uppercase;
+	font-size: 30px;
+	line-height: 30px;
+	color: var(--basic-black);
+}
+.title-product{
+	color: var(--basic-blue);
+}
+
+.list-company{
+	font-family: Cuprum;
+    font-size: 18px;
+    line-height: 24px;
+}
+.modal{
+	display: none;
+}
+/*footer*/
+.logo-footer{
+	height: 68px;
+}
+.footer{
+	background-color: var(--basic-blue-dark);
+	color: var(--basic-white);
+	font-size: 16px;
+	line-height: 18px;
+}
+.adress-footer{
+	color: var(--basic-special);
+}
+.main-footer a{
+	color: var(--basic-special);
+}
+.additional-footer-menu a,.mail,.url{
+	color: var(--basic-yellow-dark);
+}
+.additional-footer-menu a:hover,
+.additional-footer-menu a:focus{
+	text-decoration: underline;
+}
+
+/*Catalog*/
+.my-order,.account{
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--basic-blue);
+}
+.breadcrumbs,.breadcrumbs a {
+  font-family: PT Sans;
+  list-style: none;
+  text-transform: uppercase;
+  color: var(--basic-black);
+  font-size: 13px;
+  line-height: 18px;
+ }
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  text-decoration: underline;
+}
+
+.breadcrumbs-current {
+  color: var(--basic-dark);
+}
+.list-item-brand,.list-item-type{
+	font-family: PT Sans;
+    font-size: 15px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.list-item-title{
+	font-family: PT Sans;
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+.name-product{
+	font-family: PT Sans;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--basic-black);
+}
+.filter-button{
+	font-family: PT Sans;
+	font-size: 13px;
+	line-height: 18px;
+	background-color: var(--basic-white);
+	color: var(--basic-black);
+	border: 1px solid var(--basic-grey-light);
+}
