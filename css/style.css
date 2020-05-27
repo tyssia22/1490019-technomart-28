@@ -70,8 +70,8 @@ img {
 .menu,.main-footer{
 	background-color: var(--basic-blue);
 }
-.menu a:hover,
-.menu a:focus{
+.main-menu a:hover,
+.main-menu a:focus{
 	background-color: var(--basic-blue-dark);
 }
 .logo{
@@ -79,9 +79,6 @@ img {
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 	width: 220px;
 	height: 47px;
-	background-image: url('../img/logo-technomart.svg');
-    background-position: center center;
-    background-repeat: no-repeat;
 }
 .logo:hover,
 .logo:focus{
@@ -176,12 +173,28 @@ img {
 .main-footer a{
 	color: var(--basic-special);
 }
+.main-footer a:hover,
+.main-footer a:focus{
+	text-decoration: underline;
+}
+.main-footer a:active{
+	opacity: 0.5;
+	text-decoration: none;
+}
 .additional-footer-menu a,.mail,.url{
 	color: var(--basic-yellow-dark);
 }
 .additional-footer-menu a:hover,
 .additional-footer-menu a:focus{
 	text-decoration: underline;
+}
+.additional-footer-menu a:active{
+	text-decoration: none;
+	opacity: 0.5;
+}
+.social-icons a: hover,
+.social-icons a: focus{
+	color: var(--basic-pink);
 }
 
 /*Catalog*/
