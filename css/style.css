@@ -12,7 +12,9 @@
   --basic-green-light: #5fbb2d;
   --basic-green-dark: #518534;
   --basic-grey: #b5b5b5;
+  --basic-grey-light-one: #c5c5c5;
   --basic-grey-light: #e5e5e5;
+  --basic-grey-dark: #a9a9a9;
   --basic-white: #ffffff;
   --basic-black: #000000;
   --basic-special: #f3f7f9;
@@ -74,6 +76,10 @@ img {
 .main-menu a:focus{
 	background-color: var(--basic-blue-dark);
 }
+.main-menu a:active,
+{
+	opacity: 0.5;
+}
 .logo{
 	background-color: var(--basic-pink);
 	box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
@@ -90,7 +96,7 @@ img {
 .search {
   background-color: inherit;
   background-image: url("../img/icon-search.svg");
-  background-position: center;
+  background-position: 19px center;
   background-repeat: no-repeat;
   width: 271px;
   height: 42px;
@@ -192,17 +198,83 @@ img {
 	text-decoration: none;
 	opacity: 0.5;
 }
-.social-icons a: hover,
-.social-icons a: focus{
-	color: var(--basic-pink);
+.social-button {
+  color: inherit;
+}
+
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-pink);
 }
 
 /*Catalog*/
+
 .my-order,.account{
     font-size: 16px;
     line-height: 18px;
     color: var(--basic-blue);
 }
+.my-order:hover,
+.my-order:focus,
+.account:hover,
+.account:focus{
+	color:var(--basic-pink);
+}
+.my-order:active,
+.account:active{
+	color:var(--basic-grey-light-one);
+}
+.cart{
+	width: 136px;
+	height: 42px;
+	background-color: var(--basic-pink);
+}
+.old-price{
+  color: var(--basic-grey-dark);
+  text-decoration: line-through;
+  text-transform: uppercase;
+}
+.new-price{
+	width: 141px;
+	height: 38px;
+	background-color: var(--basic-pink);
+	text-transform: uppercase;
+	padding-left: 32px;
+	padding-top:10px;
+	box-sizing: border-box; 
+}
+.list-item-perforator li{
+	border: 1px solid #eaeaea;
+	box-sizing: border-box;
+	width: 220px;
+	height: 318px;
+}
+.buy,.bookmark{
+	font-family: Cuprum;
+	text-transform: uppercase;
+	font-size: 14px;
+	line-height: 18px;
+	width: 135px;
+	height: 38px;
+}
+.buy{
+	background-color: var(--basic-green);
+	border: none;
+	color: var(--basic-white);
+	
+}
+.bookmark{
+	border: 3px solid var(--basic-green);
+	background-color: var(--basic-white);
+}
+
+/*Пока не знаю как реализовать
+.list-item-perforator li:hover,
+.list-item-perforator li:focus{
+   box-shadow: inset 5px -5px 5px rgba(0, 0, 0, 0.24);
+
+}
+*/
 .breadcrumbs,.breadcrumbs a {
   font-family: PT Sans;
   list-style: none;
