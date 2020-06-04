@@ -16,20 +16,20 @@
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Техномарт">
           </a>
         </div>
-        <div> 
-         	<input type="search" class="search" placeholder="Поиск:">
+        <div class="search"> 
+         	<input type="search" class="search-input" placeholder="Поиск:">
       	</div>
-      	<a href=""><img src="img/icon-bookmark.svg" width="14" height="16" alt="Закладки">Закладки:0</a>
+      	<a href="">Закладки:0</a>
         <p class="cart">
-  		    <a href=""><img src="img/icon-cart.svg" width="15" height="15" alt="Корзина">Корзина:10</a>
+  		    <a href="">Корзина:10</a>
         </p>
         <p class="order">
   		    <a href="">Оформить заказ</a>
         </p>
       </div>
     </div>
-    <div class="header">
-       <div class="wrapper">
+    <div class="header-bottom">
+       <div class="wrapper wrapper-header-bottom">
       		<p  class="description">
       			Интернет-магазин  <br>строительных материалов  <br> и инструментов для ремонта
       		</p>
@@ -48,7 +48,7 @@
        </div>
     </div> 
 		<nav class="menu main-menu">
-    		<ul>
+    		<ul class="main-navigation">
       		<li><a href="index.html">Главная</a></li>
       		<li><a href="">Компания</a></li>
       		<li><a href="">Каталог</a></li>
@@ -59,12 +59,12 @@
     		</ul>
     	</nav>
     </header>
-    <main class=" page-catalog container">
+    <main class="page-catalog container">
       <ul class="breadcrumbs">
         <li><a href=""><img src="img/icon-home.svg" width="14" height="12" alt="Домой"></a></li>
         <li><a href="">Каталог</a></li>
         <li><a href="">Инструмент</a></li>
-        <li>Перфораторы</li>
+        <li class="breadcrumbs-current">Перфораторы</li>
       </ul>
       <h1 class="title title-product">Перфораторы</h1>
       <section class="filters">
@@ -74,23 +74,23 @@
             <legend class="list-item-title">Производители:</legend>
             <ul class="list-item-brand">
               <li>
-                <input type="checkbox" name="Bosch" id="filter-bosch" checked>
+                <input type="checkbox" name="Bosch" class="visually-hidden" id="filter-bosch" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li>
-                <input type="checkbox" name="/Interscol" id="filter-interscol">
+                <input type="checkbox" name="/Interscol" class="visually-hidden" id="filter-interscol">
                 <label for="filter-interscol">Интерскол</label>
               </li>
               <li>
-                <input type="checkbox" name="Makita" id="filter-makita" checked>
+                <input type="checkbox" name="Makita" class="visually-hidden" id="filter-makita" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li>
-                <input type="checkbox" name="Dewalt" id="filter-dewalt">
+                <input type="checkbox" name="Dewalt" class="visually-hidden" id="filter-dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li>
-                <input type="checkbox" name="Hitachi" id="filter-hitachi">
+                <input type="checkbox" name="Hitachi" class="visually-hidden" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -99,11 +99,11 @@
             <legend class="list-item-title">Питание:</legend>
             <ul class="list-item-type">
               <li>
-                <input type="radio" name="product-group" value="rechargeable" id="filter-rechargeable" checked>
+                <input type="radio" name="product-group" class="visually-hidden" value="rechargeable" id="filter-rechargeable" checked>
                 <label for="filter-rechargeable">Аккумуляторные</label>
               </li>
               <li>
-                <input type="radio" name="product-group" value="networking" id="filter-networking">
+                <input type="radio" name="product-group" class="visually-hidden" value="networking" id="filter-networking">
                 <label for="filter-networking">Сетевые</label>
               </li>
             </ul>
