@@ -572,6 +572,34 @@ input[type="radio"].visually-hidden {
 .breadcrumbs-current {
   color: var(--basic-dark);
 }
+.list-item-brand li,
+.list-item-type li{
+  margin-left: 35px;
+}
+.filter-option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+}
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -42px;
+  top: -1px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #000000;
+}
 .list-item-brand,.list-item-type{
   font-family: PT Sans;
   font-size: 15px;
