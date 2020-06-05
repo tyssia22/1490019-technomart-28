@@ -42,7 +42,7 @@ img {
 }
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
+input[type="radio"].visually-hidden, {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -65,14 +65,14 @@ input[type="radio"].visually-hidden {
   align-content: start;
 }
 /*Header*/
+/*Top-header*/
+.main-header{
+  background-color: var(--basic-special);
+}
 .top-header{
   background-color: var(--basic-blue-dark);
   color: var(--basic-white);
   min-height: 42px;
-}
-.wrapper, .wrapper-footer, .main-menu{
-  width: 940px;
-  margin: 0 auto;
 }
 .wrapper{
   display: flex;
@@ -83,8 +83,183 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
   position: relative;
 }
-.wrapper-header-bottom{
-  align-items: flex-start;
+.wrapper, .wrapper-footer, .main-menu{
+  width: 940px;
+  margin: 0 auto;
+}
+/*Logo*/
+.logo-header{
+  height: 47px;
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+}
+.logo{
+  background-color: var(--basic-pink);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  width: 220px;
+}
+.logo:hover,
+.logo:focus{
+  background-color: var(--basic-pink);
+}
+.logo:active{
+  background-color: var(--basic-pink-dark);
+}
+.logo a{
+  display: block;
+  padding-left: 55px;
+  padding-top: 12px;
+}
+/*Search*/
+.search {
+  width: 270px;
+  min-height: 42px;
+  margin-left: 220px;
+}
+.search input[type="search"] {
+  border: none;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-top: 9px;
+}
+/*Эффект при наведении на поиск не работает*/
+.search input[type="search"]:active,
+.search input[type="search"]:focus, {
+ border: none;
+ opacity: 0.5;
+ background-color: var(--basic-blue);
+}
+/*Не вставляется иконка поиска*/
+.search input[type="search"]::before {
+  content: "не вставляется иконка";
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-search.svg");
+  top: 12px;
+  left: 367px;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: var(--basic-white);
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: var(--basic-white);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: var(--basic-white);
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: var(--basic-white);
+}
+/*Bookmarks and Basket*/
+.bookmarks a{
+  display: block;
+  padding-top: 9px;
+  padding-right: 24px;
+  padding-bottom: 9px;
+  padding-left: 43px;
+}
+.bookmarks .bookmarks-link{
+  position: relative;
+}
+.bookmarks-link::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left:20px;
+  background-image: url("../img/icon-bookmark.svg");
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 16px;
+  opacity: 0.3;
+}
+.basket a{
+  display: block;
+  padding-top: 9px;
+  padding-right: 26px;
+  padding-bottom: 9px;
+  padding-left: 49px;
+}
+.basket .basket-link{
+  position: relative;
+}
+.basket-link::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 26px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  opacity: 0.3;
+}
+.bookmarks-link:hover::before,
+.bookmarks-link:focus::before,
+.basket-link:hover::before,
+.basket-link:focus::before {
+  opacity: 1;
+}
+.bookmarks-link:active,
+.basket-link:active {
+  background-color: #161d29;
+  opacity: 0.5;
+}
+/*Bottom-header*/
+.bottom-header{
+  display: flex;
+  padding-top: 46px;
+  outline: 5px solid red;  
+}
+.description{
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-pink);
+  font-style: italic;
+  margin-left: 30px;
+  max-width: 197px;
+}
+.phone{
+  border: 3px solid var(--basic-white);
+  background-color: var(--basic-special);
+  margin-left: 93px;
+  position: relative;
+}
+.phone .phone-number{
+  box-sizing: border-box;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+  color: var(--basic-pink);
+  position: relative;
+  display: block;
+  padding-top: 7px;
+  padding-left: 74px;
+  width: 270px;
+  min-height: 45px;
+}
+.phone-number::before{
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: 39px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: repeat;
+  background-position: 0 0;
+  width: 19px;
+  height: 19px;
+}
+.address{
+  display: block;
+  font-size: 14px;
+  color: var(--basic-blue);
+  position: absolute;
+  top: 48px;
+  left: 10px;
 }
 .order{
   background-color: var(--basic-green);
@@ -104,75 +279,7 @@ input[type="radio"].visually-hidden {
 .order a:active {
   color: rgba(255, 255, 255, 0.5);
 }
-.logo-header{
-  position: absolute;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-}
-.logo{
-  background-color: var(--basic-pink);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
-  width: 220px;
-  height: 47px;
- 
-}
-.logo:hover,
-.logo:focus{
-  background-color: var(--basic-pink);
-}
-.logo:active{
-  background-color: var(--basic-pink-dark);
-}
-.logo a{
-  display: block;
-  padding-left: 55px;
-  padding-top: 12px;
-}
-.search {
-  width: 270px;
-  min-height: 42px;
-  border: none;
-  margin-left: 236px;
-  outline: 5px solid red;
-  position: relative;
-}
-.search input[type="search"] {
-  border: none;
-  background-color: inherit;
-  width: 100%;
-  height: 100%;
-  padding-left: 42px;
-  padding-top: 9px;
-}
-.search-input::before {
-  content: "gyiyuiu";
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  background-image: url("img/icon-search.svg");
-  opacity: 0.3;
-  top: 9px;
-  left: 12px;
-}
-::-webkit-input-placeholder { /* Chrome */
-  color: var(--basic-white);
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: var(--basic-white);
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: var(--basic-white);
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: var(--basic-white);
-}
 
-.header-bottom{
-  display: flex;
-  justify-content: center;
-  padding-top: 45px;	
-}
 .main-menu ul{
   display: flex;
   min-height: 60px;
@@ -220,6 +327,19 @@ input[type="radio"].visually-hidden {
   padding-top: 70px;
   padding-bottom: 70px;
 }
+
+.login-index, .registration {
+  background-color: var(--basic-white);
+  outline: 5px solid #ff0000;
+  min-height: 45px;
+}
+.login-index{
+  margin-right: 10px;
+  max-width: 121px;
+}
+.registration{
+  max-width: 150px;
+}
 .contacts{
   width: 300px;
   padding-top: 70px;
@@ -230,45 +350,9 @@ input[type="radio"].visually-hidden {
  } 
 
 
-.description{
-  font-family: "Cuprum", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 23px;
-  color: var(--basic-pink);
-  font-style: italic;
-}
-.phone{
-  border: 3px solid var(--basic-white);
-  background-color: var(--basic-special);
-  width: 240px;
-  min-height: 45px;
 
-}
-.phone .phone-number{
-  font-size: 21px;
-  line-height: 30px;
-  font-weight: bold;
-  color: var(--basic-pink);
-  position: relative;
-  display: block;
-  text-align: center;
-}
-.phone-number::before{
-  content: "";
-  position: absolute;
-  top:10px;
-  left: 39px;
-  background-image: url("img/icon-phone.svg");
-  background-repeat: repeat;
-  background-position: 0 0;
-  width: 19px;
-  height: 19px;
-}
-.address{
-  font-size: 14px;
-  color: var(--basic-blue);
-  position: absolute;
-}
+
+
 .login, .registration a, .login-index a{
   font-size: 21px;
   line-height: 21px; 
@@ -288,14 +372,11 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top:10px;
   left: 39px;
-  background-image: url("img/icon-phone.svg");
+  background-image: url("../img/icon-login.svg");
   background-repeat: repeat;
   background-position: 0 0;
   width: 19px;
   height: 19px;
-}
-.main-header{
-  background-color: var(--basic-special);
 }
 .button{
   text-transform: uppercase;
@@ -544,7 +625,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   width: 8px;
   height: 12px;
-  background-image:url("img/icon-right-small.svg");
+  background-image:url("../img/icon-right-small.svg");
   background-repeat: no-repeat;
 }
 .breadcrumbs li:last-child {
