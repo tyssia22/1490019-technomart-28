@@ -30,6 +30,12 @@ body {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
+h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+}
 a {
   text-decoration: none;
 }
@@ -78,14 +84,12 @@ input[type="radio"].visually-hidden, {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  font-family: Cuprum, Arial, sans-serif;
-  line-height: 24px;
   position: relative;
 }
 .wrapper, .wrapper-footer, .main-menu{
   width: 940px;
   margin: 0 auto;
+  outline: 3px solid red;
 }
 /*Logo*/
 .logo-header{
@@ -213,7 +217,7 @@ input[type="radio"].visually-hidden, {
 .bottom-header{
   display: flex;
   padding-top: 46px;
-  outline: 5px solid red;  
+  padding-bottom: 40px;
 }
 .description{
   font-size: 16px;
@@ -254,13 +258,127 @@ input[type="radio"].visually-hidden, {
   height: 19px;
 }
 .address{
-  display: block;
   font-size: 14px;
   color: var(--basic-blue);
   position: absolute;
   top: 48px;
   left: 10px;
 }
+/*Login and registration*/
+.login a,
+.registration a{
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+  display: block;
+}
+.login a{  
+  padding-top: 12px;
+  padding-right: 27px;
+  padding-bottom: 12px;
+  padding-left: 45px;
+  position: relative;
+}
+.registration a{  
+  padding-top: 12px;
+  padding-right: 24px;
+  padding-bottom: 12px;
+  padding-left: 24px;
+}
+.login a::before{
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 19px;
+  background-image: url("../img/icon-login.svg");
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 17px;
+}
+.my-order:hover,
+.my-order:focus,
+.account:hover,
+.account:focus,
+.registration a:hover,
+.registration a:focus,
+.login a:hover,
+.login a:focus{
+  color:var(--basic-pink);
+}
+.login a:active,
+.registration a:active,
+.my-order:active,
+.account:active{
+  color:var(--basic-grey-light-one);
+}
+.login a:hover::before,
+.login a:focus::before{
+  background-image: url("../img/icon-login-active.svg");
+}
+/*не работает*/
+.login a:hover::active{
+  background-image: url("../img/icon-login.svg");
+}
+/*Navigation*/
+.main-menu{
+  margin-bottom: 60px;
+}
+.main-menu, .main-footer{
+  background-color: var(--basic-blue);
+}
+.main-menu ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24); 
+}
+.main-navigation a{
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  padding-right: 28px;
+  padding-left: 28px;
+  }
+.main-menu a:hover,
+.main-menu a:focus{
+  background-color: var(--basic-blue-dark);
+}
+.main-menu a:active{
+  opacity: 0.5;
+}
+/*Section about company*/
+.description-company{
+  width: 460px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.description-company p,
+.contacts p{
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+.button{
+  text-transform: uppercase;
+  background-color: var(--basic-pink);
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+  padding-left: 40px;
+  padding-top: 11px;
+  min-height: 38px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+.button-company{
+  width: 220px;
+}
+
 .order{
   background-color: var(--basic-green);
   width: 150px;
@@ -280,35 +398,7 @@ input[type="radio"].visually-hidden, {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.main-menu ul{
-  display: flex;
-  min-height: 60px;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24); 
-}
-.main-navigation a{
-  display: block;
-  padding: 20px 25px;
-}
-.menu{
-	margin-bottom: 60px;
-}
 
-.menu,.main-footer{
-  background-color: var(--basic-blue);
-}
-.main-menu a:hover,
-.main-menu a:focus{
-  background-color: var(--basic-blue-dark);
-}
-.main-menu a:active,
-{
-  opacity: 0.5;
-}
 .container-bottom-footer {
   display: flex;
   flex-wrap: wrap;
@@ -322,24 +412,9 @@ input[type="radio"].visually-hidden, {
   justify-content: center;
 }
 
-.description-company{
-  width: 460px;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
 
-.login-index, .registration {
-  background-color: var(--basic-white);
-  outline: 5px solid #ff0000;
-  min-height: 45px;
-}
-.login-index{
-  margin-right: 10px;
-  max-width: 121px;
-}
-.registration{
-  max-width: 150px;
-}
+
+
 .contacts{
   width: 300px;
   padding-top: 70px;
@@ -353,55 +428,9 @@ input[type="radio"].visually-hidden, {
 
 
 
-.login, .registration a, .login-index a{
-  font-size: 21px;
-  line-height: 21px; 
-  background-color: var(--basic-white);
-  color: var(--basic-black);
-}
-.login-index{
-  width: 121px;
-  min-height: 45px;
-}  
-.login-index .login{
-  padding-left: 48px;
-  position: relative;
-}
-.login::before{
-  content: "";
-  position: absolute;
-  top:10px;
-  left: 39px;
-  background-image: url("../img/icon-login.svg");
-  background-repeat: repeat;
-  background-position: 0 0;
-  width: 19px;
-  height: 19px;
-}
-.button{
-  text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--basic-pink);
-  font-family: Cuprum, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  display: block;
-  padding-left: 40px;
-  padding-top: 11px;
-  min-height: 38px;
-  margin-top: 20px;
-  box-sizing: border-box;
-}
-.button-company{
-  width: 220px;
-}
-.title{
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 30px;
-  color: var(--basic-black);
-  font-weight: normal;
-}
+
+
+
 .description-company p,.contacts p{
   font-family: PT Sans;
   font-style: normal;
@@ -525,22 +554,8 @@ input[type="radio"].visually-hidden, {
   line-height: 18px;
   color: var(--basic-blue);
 }
-.my-order:hover,
-.my-order:focus,
-.account:hover,
-.account:focus,
-.registration a:hover,
-.registration a:focus,
-.login-index a:hover,
-.login-index a:focus{
-  color:var(--basic-pink);
-}
-.my-order:active,
-.account:active
-.registration a:active,
-.login-index a:active{
-  color:var(--basic-grey-light-one);
-}
+
+
 .cart{
   width: 136px;
   height: 42px;
