@@ -107,10 +107,10 @@ fieldset{
   width: 220px;
 }
 .logo:hover, .logo:focus, .button:hover, .button:focus, .new-price:hover, 
-.new-price:focus{
+.new-price:focus, .modal-order:hover, .modal-order:focus{
   background-color: var(--basic-pink);
 }
-.logo:active, .button:active, .new-price:active{
+.logo:active, .button:active, .new-price:active, .modal-order:active{
   background-color: var(--basic-pink-dark);
 }
 .logo-header a{
@@ -502,9 +502,6 @@ fieldset{
   font-size: 18px;
   line-height: 24px;
 }
-.modal{
-  display: none;
-}
 /*footer*/
 .wrapper-footer{
   display: grid;
@@ -718,7 +715,41 @@ fieldset{
 /*Sort and filters-catalog*/
 .sort {
   display: flex;
+  flex-wrap: wrap;
+  background-color: #f7f3ec;
+  min-height: 38px;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 28px;
 }
+.sort-list{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  padding-right: 106px;
+}
+.sort-list li{
+  padding: 0;
+  display: inline;
+  border-bottom: 1px dashed var(--basic-pink);
+}
+.sort-title{
+  margin: 0;
+  padding-left: 19px;
+  font-size: 13px;
+  line-height: 18px;
+}
+.sort-list button{
+  border: none;
+  background-color: inherit;
+  font-size: 13px;
+  line-height: 17px;
+  opacity: 0.3;
+  text-transform:uppercase;
+  
+ }
 .filter-brand, .filter-type {
   padding: 0;
   margin: 0;
@@ -898,6 +929,16 @@ fieldset{
   border: 1px solid var(--basic-grey-light);
   border-radius: 2px;
 }
+.page-navigation-current a{
+  color: var(--basic-white);
+  background-color: var(--basic-pink);
+}
+.page-navigation-item a:hover, .page-navigation-item a:focus{
+  border: 1px solid var(--basic-grey);
+}
+.page-navigation-item a:active{
+  border: 1px solid var(--basic-pink);
+}
 .buy, .bookmark{
   font-family: Cuprum;
   text-transform: uppercase;
@@ -1042,3 +1083,109 @@ fieldset{
   margin-left: 24px;
   z-index: 2;
  }
+ .wrapper-description-items{
+  background-color: var(--basic-special);
+ }
+.description-items{
+  width: 940px;
+  margin: 0 auto;
+  margin-top: 59px;
+  padding-top: 64px;
+  padding-bottom: 68px;
+}
+/*Modal*/
+.modal{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: var(--basic-white);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.modal-basket{
+  width: 620px;
+  height: 282px;
+  text-align: center;
+}
+.modal-title{
+  text-transform: none;
+  font-size: 24px;
+  padding-top: 73px;
+  padding-bottom: 67px;
+  font-weight: bold;
+}
+.modal-title:before{
+  position: absolute;
+  content: "";
+  background-image: url("../img/icon-mark.svg");
+  width: 66px;
+  height: 66px;
+  left: 81px;
+  top: 55px;
+}
+.modal-title:after{
+  position: absolute;
+  content: "";
+  background: var(--basic-pink);
+  width: 620px;
+  height: 7px;
+  top: 0;
+  left: 0;
+}
+.wrapper-modal-button{
+  background-color: var(--basic-grey-light);
+}
+.modal-order, .modal-continue{
+  margin-top: 37px;
+  margin-bottom: 37px;
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 11px 46px 9px 47px;
+}
+.modal-order{
+  background-color: var(--basic-pink);
+  color: var(--basic-white);
+}
+.modal-continue{
+  background-color: var(--basic-white);
+  margin-left: 10px;
+}
+.modal-order:active, .modal-continue:active{
+  border: 0;
+}
+.modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 21px;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 18px;
+  right: 11px;
+  width: 19px;
+  height: 3px;
+  background-color: var(--basic-pink);
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+/*Modal-form*/
+.modal-form{
+  width: 620px;
+  height: 430px;
+  text-align: center;
+}
