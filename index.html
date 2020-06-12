@@ -88,11 +88,21 @@
         </div>
         <section class="wrapper">
             <div class="popular">
-                <h2 class="title-product">Популярные товары</h2>
-                <a href="" class="button button-company">Все популярные товары</a>
+                <h2 class="popular-title">Популярные товары</h2>
+                <a href="" class="popular-link">Все популярные товары</a>
             </div>
             <ul class="catalog-list">
-                <li class="catalog-item">
+                <li class="catalog-item catalog-item-index">
+                  <a href="">
+                   <p class="catalog-item-image">
+                    <img src="img/catalog/Perforator-BOSCH BFG-9000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 9000">
+                   </p>
+                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 9000</h3>
+                   <span class="old-price">32500 р.</span>
+                   <button class="new-price">25500 р.</button>
+                  </a>
+                </li>
+                <li class="catalog-item catalog-item-index">
                   <a href="">
                    <p class="catalog-item-image">
                     <img src="img/catalog/Perforator-BOSCH BFG-3000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
@@ -102,42 +112,31 @@
                    <button class="new-price">15500 р.</button>
                   </a>
                 </li>
-                <li class="catalog-item">
+                <li class="catalog-item catalog-item-index">
                   <a href="">
                    <p class="catalog-item-image">
-                    <img src="img/catalog/Perforator-BOSCH BFG-3000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+                    <img src="img/catalog/Perforator-BOSCH BFG-6000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
                    </p>
-                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 3000</h3>
-                   <span class="old-price">22500 р.</span>
-                   <button class="new-price">15500 р.</button>
+                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 6000</h3>
+                   <span class="old-price">30500 р.</span>
+                   <button class="new-price">25500 р.</button>
                   </a>
                 </li>
-                <li class="catalog-item">
+                <li class="catalog-item catalog-item-index">
                   <a href="">
                    <p class="catalog-item-image">
-                    <img src="img/catalog/Perforator-BOSCH BFG-3000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
+                    <img src="img/catalog/Perforator-BOSCH BFG-2000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
                    </p>
-                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 3000</h3>
-                   <span class="old-price">22500 р.</span>
-                   <button class="new-price">15500 р.</button>
-                  </a>
-                </li>
-                <li class="catalog-item">
-                  <a href="">
-                   <p class="catalog-item-image">
-                    <img src="img/catalog/Perforator-BOSCH BFG-3000.jpg" width="144" height="128" alt="Перфоратор BOSCH BFG 3000">
-                   </p>
-                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 3000</h3>
-                   <span class="old-price">22500 р.</span>
-                   <button class="new-price">15500 р.</button>
+                   <h3 class="name-product">Перфоратор BOSCH <br> BFG 2000</h3>
+                   <button class="new-price">12500 р.</button>
                   </a>
                 </li>
             </ul>
         </section>
         <section class="wrapper">
             <div class="popular">
-                <h2 class="title-product">Популярные производители:</h2>
-                <a href="" class="button button-company">Все производители</a>
+                <h2 class="popular-title">Популярные производители:</h2>
+                <a href="" class="popular-link">Все производители</a>
             </div>
             <div class="logo-brand">
                 <a href="">
@@ -292,30 +291,31 @@
         </div>
     </footer>
     <section class="modal modal-map">
-      <h2>Большая карта</h2>
+      <h2 class="visually-hidden">Большая карта</h2>
       <img src="img/map-popup.png" width="943" height="449" alt="Большая карта">
       <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
     <section class="modal modal-form">
       <h2 class="visually-hidden">Отправить сообщение</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <p>
+        <form action="https://echo.htmlacademy.ru" method="post" class="write-us">
+          <p class="modal-form-item">
             <label for="name">Ваше имя:</label>
-            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия" class="user-name">
           </p>
-          <p>
+          <p class="modal-form-item modal-user-email">
             <label for="email">Ваш e-mail:</label>
-            <input type="email" name="email" id="email" placeholder="email@example.com">
+            <input type="email" name="email" id="email" placeholder="email@example.com" class="user-email">
           </p>
-          <p>
+          <p class="modal-form-area">
             <label for="textarea">Текст письма:</label>
-            <textarea name="textarea" id="textarea" placeholder="В свободной форме"></textarea>
+            <textarea name="textarea" id="textarea" placeholder="В свободной форме" class="user-text"></textarea>
               </p>
-          <div class="wrapper-modal-button">    
-            <button type="submit">Отправить</button>
+          <div class="wrapper-modal-submit">    
+            <button type="submit" class="modal-submit">Отправить</button>
           </div>  
-            </form>
+        </form>
             <button class="modal-close" type="button" aria-label="Закрыть"></button>
         </section>
+ <script src="js/modal-form.js"></script>       
   </body>
 </html>

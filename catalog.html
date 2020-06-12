@@ -74,7 +74,29 @@
                 <li><button type="button">По типу</button></li>
                 <li><button type="button">По функционалу</button></li>
               </ul>
-        </section>    
+        </section>
+        <form method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-item">
+           <legend>Цена:</legend>
+           <div class="range-filter">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar"></div>
+            </div>
+            <div class="toggle toggle-min" tabindex="0"></div>
+            <div class="toggle toggle-max" tabindex="0"></div>
+            </div>
+            <div class="price-controls">
+              <label class="min-price">
+              <input type="number" name="min-price" value="0">
+              </label>
+              <label class="max-price">
+                - <input type="number" name="max-price" value="30000">
+              </label>
+            </div>
+           </div>
+          </fieldset>
+        </form>
         <section class="filters">
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <form class="filters" action="https://echo.htmlacademy.ru" method="get">
@@ -152,6 +174,7 @@
                 <h3 class="name-product">Перфоратор BOSCH <br> BFG 2000</h3>
                 <span class="old-price">30500 р.</span>
                 <button class="new-price">25500 р.</button>
+                <span class="sticker-new">New</span>
               </a>
             </li>
             <li class="catalog-item">
@@ -181,6 +204,7 @@
                 </p>
                 <h3 class="name-product">Перфоратор BOSCH <br> BFG 2000</h3>
                 <button class="new-price">12500 р.</button>
+
               </a>
             </li>
             <li class="catalog-item">
