@@ -18,7 +18,7 @@
             </div>
             <input type="search" class="search" placeholder="Поиск:">
             <a href="" class="bookmarks">Закладки: 0</a>
-            <a href="" class="basket add-basket">Корзина: 0</a>
+            <a href="" class="basket add-basket">Корзина: 10</a>
             <a href="" class="order">Оформить заказ</a>
             </div>    
         </div>
@@ -63,9 +63,9 @@
         <section class="sort">
             <h2 class="sort-title">Сортировка:</h2>
                 <ul class="sort-list">
-                  <li><button type="button">По цене</button></li>
-                  <li><button type="button">По типу</button></li>
-                  <li><button type="button">По функционалу</button></li>
+                  <li><button type="button" class="sort-list-item-current">По цене</button></li>
+                  <li><button type="button" class="sort-list-item">По типу</button></li>
+                  <li><button type="button" class="sort-list-item">По функционалу</button></li>
                 </ul>
           </section>
         <div>  
@@ -91,6 +91,7 @@
              </div>
             </fieldset>
           </form>
+          <hr class="line-form">
           <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
             <form class="filters" action="https://echo.htmlacademy.ru" method="get">
@@ -257,13 +258,6 @@
         		</p>
         </section>
       </div>
-      <section class="visually-hidden">
-        <h2>Товар добавлен в корзину</h2>
-        <img src="img/icon-mark.svg" width="66" height="66" alt="Товар добавлен">
-        <button type="submit"><img src="img/icon-close.svg" width="21" height="21" alt="Закрыть форму"></button>
-        <button type="submit">Оформить заказ</button>
-        <button type="submit">Продолжить покупки</button>
-      </section>
     </main>
     <footer class="main-footer">
         <div class="wrapper-footer">
@@ -351,5 +345,6 @@
        </div>
        <button class="modal-close" type="button" aria-label="Закрыть"></button>
      </section>
+  <script src="js/modal-basket.js"></script>
   </body>
 </html>
