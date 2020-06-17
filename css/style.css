@@ -108,11 +108,13 @@ fieldset{
   width: 220px;
 }
 .logo:hover, .logo:focus, .button:hover, .button:focus, .new-price:hover, 
-.new-price:focus, .modal-order:hover, .modal-order:focus{
+.new-price:focus, .modal-order:hover, .modal-order:focus, .slide-link:hover, 
+.slide-link:focus, .popular-link:hover, .popular-link:focus{
   background-color: var(--basic-pink);
   outline: none;
 }
-.logo:active, .button:active, .new-price:active, .modal-order:active{
+.logo:active, .button:active, .new-price:active, .modal-order:active,
+.slide-link:active, .popular-link:active{
   background-color: var(--basic-pink-dark);
 }
 .logo-header a{
@@ -436,21 +438,13 @@ fieldset{
   text-transform: uppercase;
   text-align: center;
   padding-top: 10px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-.category-link-yellow-dark{
-  background-color: rgba(255, 191, 71, 0.3);
+.category-link:hover, .category-link:focus{
+  background-color: rgba(197, 197, 197, 0.3);
 }
-.category-link-blue{
-  background-color: rgba(59, 188, 227, 0.3);
-}
-.category-link-purple{
-  background-color: rgba(220, 145, 216, 0.3); 
-}
-.category-link-green{
-  background-color: rgba(142, 215, 143, 0.3); 
-}
-.category-link-yellow{
-  background-color: rgba(255, 192, 71, 0.3);
+.category-link:focus{
+  background-color: rgba(169, 169, 169, 0.3);
 }
 .slide{
   grid-column-start: 1;
@@ -529,7 +523,7 @@ fieldset{
   text-transform: uppercase;
   margin-right: 14px;
   height: 38px;
-  padding: 11px 24px;
+  padding: 11px 24px 9px 24px;
   box-sizing: border-box;
 }
 /*Section popular brand*/
@@ -627,7 +621,7 @@ fieldset{
   width: 468px;
   height: 261px;
   right: 0;
-  top:265px;
+  top:255px;
 }
 .title{
   color: var(--basic-blue);
@@ -1216,6 +1210,7 @@ fieldset{
 .catalog-list .catalog-item{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   width: 220px;
@@ -1264,15 +1259,31 @@ fieldset{
   text-transform: uppercase;
   display: block;
 }
-.new-price{
-  border: none;
-  width: 141px;
-  margin-right: 10px;
-  padding: 10px 14px 10px 29px;
+.new-price {
   color: #fff;
-  background-color: var(--basic-pink);
   border-radius: 3px 0 0 3px;
-  margin-bottom: 21px;
+  -moz-border-radius: 3px 0 0 3px; 
+  -webkit-border-radius: 3px 0 0 3px;
+  background: var(--basic-pink);
+  border: none;
+  position: relative;
+  width: 124px;
+  height: 38px;
+}
+.new-price::before{
+  left: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  border-top: 19px solid transparent;
+  border-bottom: 19px solid transparent;
+  border-left: 20px solid var(--basic-pink);
+  top:0;
+}
+.new-price:active::before{
+ border-left: 20px solid var(--basic-pink-dark);
 }
 .page-navigation{
   margin: 0;
