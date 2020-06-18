@@ -15,17 +15,8 @@ modalClose.addEventListener("click", function (evt) {
   modalForm.classList.remove("modal-show");
 });
 writeUs.addEventListener("submit", function (evt) {
-  if (!userName.value || !userEmail.value || userText.value  ) {
+  if (!userName.value || !userEmail.value) {
     evt.preventDefault();
-}else {
-    localStorage.setItem("name", userName.value);
-  }
-});
-var isStorageSupport = true;
-var storage = "";
-
-try {
-  storage = localStorage.getItem("name");
-} catch (err) {
-  isStorageSupport = false;
+    modalForm.classList.add("modal-error");
 }
+});

@@ -1240,7 +1240,7 @@ fieldset{
 .catalog-item-index:nth-child(4n){
   margin-right: 0;
 }
-.catalog-item-image {
+.catalog-item-image, .catalog-item-image-current {
   width: 144px;
   height: 128px;
   margin: 0;
@@ -1332,8 +1332,11 @@ fieldset{
   background-color: var(--basic-green);
   border: none;
   color: var(--basic-white);
-	margin-top: 38px;
-}
+	 margin-top: 38px;
+  background-image: url("../img/icon-cart.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 10px;
+}  
 .bookmark{
   color: var(--basic-blue);
   border: 3px solid var(--basic-green);
@@ -1346,11 +1349,32 @@ fieldset{
 .bookmark:active{
   opacity: 0.5;
 }
-.catalog-item-current{
+.catalog-item-button{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+ }
+.catalog-item-button-current{
+  display: block;
+  position: relative;
+}
+.catalog-item-image-current{
+  display: none;
+}
+.catalog-item-current, .catalog-item:hover, .catalog-item:focus{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
-.catalog-item:hover, .catalog-item:focus{
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+.catalog-item:hover .catalog-image, .catalog-item:focus .catalog-image, 
+.catalog-item-current:hover .button-current, 
+.catalog-item-current:focus .button-current{
+  display: none;
+}
+.catalog-item:hover .catalog-item-button, 
+.catalog-item:focus .catalog-item-button, 
+.catalog-item-current:hover .catalog-item-image-current, 
+.catalog-item-current:focus .catalog-item-image-current{
+  display: block;
 }
 /*Modal*/
 .modal{
@@ -1366,6 +1390,10 @@ fieldset{
 }
 .modal-show {
   display: block;
+  animation: bounce 0.6s;
+}
+.modal-error {
+  animation: shake 0.6s;
 }
 .modal-basket{
   width: 620px;
@@ -1546,4 +1574,45 @@ fieldset{
   background-color: var(--basic-pink);
   top: 0;
   left: 0;
+}
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
