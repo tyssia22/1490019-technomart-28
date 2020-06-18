@@ -540,19 +540,19 @@ fieldset{
   flex-wrap: wrap;
   padding-bottom: 70px;
 }
-.logo-brand-image{
+.logo-brand-link{
   margin-right: 20px;
   margin-top: 20px;
 }
-.logo-brand-image:hover{
+.logo-brand .logo-brand-link:nth-child(4n){
+  margin-right: 0;
+}
+.logo-brand img:hover, .logo-brand img:focus{
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
 }
-.logo-brand-image:active{
+.logo-brand img:active{
   opacity: 0.5;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-}
-.logo-brand-image:nth-child(4n){
-  margin-right: 0;
 }
 /*Section service*/
 .text{
@@ -698,7 +698,7 @@ fieldset{
   padding: 0;
 }
 .list-company li{
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
   position: relative;
@@ -1319,7 +1319,7 @@ fieldset{
   border: 1px solid var(--basic-pink);
 }
 .buy, .bookmark{
-  font-family: Cuprum;
+  font-family: "Cuprum", "Arial", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 18px;
